@@ -2,6 +2,10 @@ const { append } = require('express/lib/response')
 
 const router = require('express').Router()
 
+router.get('/new', (req, res) => {
+    res.render('places/new')
+  })  
+
 router.get('/', (req,res) => {
     let places = [{
         name: 'Pie In The Sky',
